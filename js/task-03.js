@@ -26,6 +26,7 @@ const imgGallery = images.map(image => {
 
   liEl.append(emageEl);
   console.log(liEl);
+  gallary.append(liEl);
 })
 
 //
