@@ -13,7 +13,7 @@ const incrementBtnHandler = () => {
 const decrimentBtnHandler = () => {
     counterValue -= 1;
    console.log(counterValue);
-    valueSpan.textContent = counterValue;
+   valueSpan.textContent = counterValue;
 };
 
 
