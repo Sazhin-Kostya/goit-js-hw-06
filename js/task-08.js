@@ -18,11 +18,16 @@ function onFormSubmit(event) {
     //document.getElementById('form').reset();
 
 
-    const formData = new FormData(event.currentTarget);
-    formData.forEach((value, name) => {
-        console.log('name', name);
-        console.log('value', value);
+    //const formData = new FormData(event.currentTarget);
+    //formData.forEach((value, name) => {
+       // console.log('name', name);
+        //console.log('value', value);
         
-    });
-    
+    //});
+    const formData = {
+        mail,
+        password,
+    }
+    console.log(formData);
+    form.reset();
 }

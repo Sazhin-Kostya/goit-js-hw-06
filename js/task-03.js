@@ -13,21 +13,28 @@ const images = [
   },
 ];
 
-const gallary = document.querySelector('.gallery');
+const gallery = document.querySelector('.gallery');
 
 const imgGallery = images.map(image => {
   const liEl = document.createElement('li');
   liEl.classList.add('.list');
 
-  const emageEl = document.createElement('img');
-  emageEl.src = image.url;
-  emageEl.alt = image.alt;
-  emageEl.width = 480;
+  const imageEl = document.createElement('img');
+  imageEl.src = image.url;
+  imageEl.alt = image.alt;
+  imageEl.width = 480;
 
-  liEl.append(emageEl);
-  console.log(liEl);
-  gallary.append(liEl);
-})
+  //liEl.append(imageEl);
+  //console.log(liEl);
+  gallery.append(liEl);
+
+  liEl.insertAdjacentHTML(
+    "beforeend",
+    `<img src = ${imageEl.src}
+      alt = ${imageEl.alt}
+      width = ${imageEl.width}>`
+  );
+});
 
 //
 //const ingredients = [
